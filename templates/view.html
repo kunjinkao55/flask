@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}View All Users{% endblock %}
+{% block body %}
+    <h3>所有用户</h3>
+    <ul>
+    {% for item in values %}
+        <li>
+            <p>Name: {{item.name}}, Email: {{item.email}}</p>
+            <form action="/delete" method="post" style="display:inline;">
+                <input type="hidden" name="_id" value="{{ item._id }}">
+                <input type="submit" value="删除" onclick="return confirm('确定要删除用户 {{ item.name }} 吗？');">
+            </form>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

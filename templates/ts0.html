@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <image alt = "picture"  src = "{{ url_for('static', filename = 'images/img0.jpg')}}" >
+    <!-- 嵌入pytihon代码 -->
+    {%for _ in range (0,times)%}
+    <p>hello {{name}} <p>
+        {%endfor%}
+        <!-- 结束行 -->
+</body>
+</html>
